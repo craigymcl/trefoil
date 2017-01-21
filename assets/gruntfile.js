@@ -4,14 +4,14 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'../css/style.css': 'screen.scss'
+					'css/style.css': 'screen.scss'
 				}
 			}
 		},
 		autoprefixer: {
 			dist: {
 				files: {
-					'../css/style.css': '../css/style.css'
+					'css/style.css': 'css/style.css'
 				}
 			}
 		},
@@ -19,9 +19,9 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: '../css',
+					cwd: 'css',
 					src: ['*.css', '!*.min.css'],
-					dest: '../css',
+					dest: 'css',
 					ext: '.min.css'
 				}]
 			}
